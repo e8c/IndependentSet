@@ -159,10 +159,14 @@ vector<int> neighb = v.neighbors;
 S_1.insert(v);
 
 copy1.remove(v);
-
-for(int i = 0; i < nieghb.size(); i++) {
+ for(int i = 0; i < nieghb.size(); i++){
+    for(int j = 0; j < copy1.size(); j++){
+      if(copy[i].vertex == neib[i]){
         copy1.remove(neighb[i]);
-}
+        j = copy1.size();
+      }
+    }
+  }
 
 S_1.insert(independentSet(copy1));
 
